@@ -308,6 +308,13 @@ h3 {
   box-shadow: var(--shadow);
 }
 
+.shot video {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #0f1013;
+}
+
 .shot figcaption {
   padding: 10px 16px;
   border-top: 1px solid var(--border);

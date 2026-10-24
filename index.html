@@ -55,9 +55,21 @@
 
           
           <figure class="shot">
-            <img src="screenshot-dashboard.png" width="1280" height="800" alt="The Earmark dashboard: saved sessions grouped into categories, with a note and the list of saved tabs showing how far each page was read." />
-            <figcaption>Every paused window, with your notes and how far you'd read on each page.</figcaption>
+            <video
+              class="demo"
+              src="demo.mp4"
+              poster="demo-poster.jpg"
+              width="1280"
+              height="720"
+              autoplay
+              muted
+              loop
+              playsinline
+              aria-label="Earmark in 20 seconds: pausing a window, filing it in a category, dictating a note that links another session, finding it on the dashboard, and resuming a page at the paragraph you were reading."
+            ></video>
+            <figcaption>Pause, file, dictate, find, resume: the whole loop in 20 seconds.</figcaption>
           </figure>
+          
           
         </div>
       </section>
@@ -268,5 +280,14 @@
   </div>
 </footer>
 
+    <script>
+      // With reduced motion on, the demo waits for a press of Play instead of looping by itself.
+      const demo = document.querySelector('video.demo');
+      if (demo && matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        demo.removeAttribute('autoplay');
+        demo.pause();
+        demo.controls = true;
+      }
+    </script>
   </body>
 </html>
